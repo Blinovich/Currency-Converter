@@ -2,15 +2,34 @@
 #include "Client.h"
 #include "Interface.h"
 
-std::string access_key = "e5035c8baeea1258c3eb4fbfc5102ca7";
 
 int main() {
-
-
-	Client client;
-	client.setAccessKey(access_key);
-	client.findResponse();
-	client.getResponse();
+	Interface i;
+	i.hello();
 	
+	Client client;
+	
+	switch (i.menu()) {
+	case 1:
+		client.setAccessKey(access_key);
+		break;
+	case 2:
+		
+		//client.findResponse();
+		//client.getResponse();
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	case 5:
+		break;
+	case 6:
+		break;
+	case 0:
+
+		break;
+	};
+
 	return 0;
 }

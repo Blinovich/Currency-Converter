@@ -1,0 +1,10 @@
+Menu: 
+1. Enter your access key (the offered key may be full (100 activations))*
+2. Withdrawal of all quotes
+3. Output of the selected cryptocurrency quote
+4. Output quotes for a specific day
+5. Output of the quote for a certain period of time
+6. Withdrawal of cryptocurrency fluctuations over a certain period of time
+* - you can get access key here https://coinlayer.com/
+
+Your choice:  

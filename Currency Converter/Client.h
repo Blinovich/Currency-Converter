@@ -8,12 +8,13 @@
 
 const static std::string MAIN_API = "api.coinlayer.com";
 const static std::string API_ARGUMENTS = "/live?access_key=";
+std::string access_key = "e5035c8baeea1258c3eb4fbfc5102ca7";
 
 namespace http = boost::beast::http; 
 
 class Client {
 public:
-	static std::string findResponse() {
+	static std::string findResponse() { // сделать наследуемым
 		boost::asio::io_context io;
 		boost::asio::ip::tcp::resolver resolver(io);
 		boost::asio::ip::tcp::socket socket(io);
@@ -41,7 +42,7 @@ public:
 		return "Done!";
 	}
 	void getResponse();
-	bool setAccessKey(const std::string access_key);
+	bool setAccessKey();
 	
 
 private:

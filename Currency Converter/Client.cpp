@@ -10,7 +10,8 @@ void Client::getResponse() {
 	}
 }
 
-bool Client::setAccessKey(const std::string access_key) {
+bool Client::setAccessKey() {
+	
 	if (access_key.size() < 32) return false;
 	this->access_key = access_key;
 	return true;

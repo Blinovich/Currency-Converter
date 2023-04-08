@@ -1,8 +1,12 @@
 #pragma once
+#include <iostream>
+#include <Windows.h>
+#include <fstream>
+#include <string>
+
 class Interface {
-	void hello() {
-
-	}
-
+public:
+	void hello();
+	int menu();
 };
 
