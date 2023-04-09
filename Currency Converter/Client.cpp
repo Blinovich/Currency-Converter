@@ -1,5 +1,7 @@
 #include "Client.h"
 
+static std::string access_key = "e5035c8baeea1258c3eb4fbfc5102ca7";
+
 void Client::getResponse() {
 	for (size_t i = 0; i < request.size(); i++) {
 		if (request[i] == ',') {
@@ -10,9 +12,12 @@ void Client::getResponse() {
 	}
 }
 
-bool Client::setAccessKey() {
-	
-	if (access_key.size() < 32) return false;
+bool Client::setAccessKey(const int num = 0) {
+	if (num == 1) {
+		std::cout << "You can get your access key here: https://coinlayer.com/\nEnter your access key: ";
+		std::cin >> access_key;
+		if (access_key.size() < 32) return false;
+	}
 	this->access_key = access_key;
 	return true;
 }
