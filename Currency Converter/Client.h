@@ -23,13 +23,11 @@ public:
 
 		boost::asio::connect(socket, resolver.resolve(MAIN_API, "80"));
 
-		if (symbols == "") {
-			http::request<http::string_body> req(http::verb::get, API_ARGUMENTS + getAccessKey(), 11);
+		http::request<http::string_body> req(http::verb::get, API_ARGUMENTS + getAccessKey(), 11);
+		if (symbols != "") {
+			req.target(API_ARGUMENTS + getAccessKey() + "&symbols=" + symbols);
 		}
-		else {
-			http::request<http::string_body> req(http::verb::get, API_ARGUMENTS + getAccessKey() + "&symbols=" + symbols, 11);
-		}
-
+		
 		req.set(http::field::host, MAIN_API);
 		req.set(http::field::user_agent, BOOST_BEAST_VERSION_STRING);
 
