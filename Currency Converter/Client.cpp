@@ -10,6 +10,9 @@ void Client::getResponse() {
 		}
 		std::cout << request[i];
 	}
+	std::cout << "\n\n";
+	system("pause"); // only for Windows
+	system("cls");
 }
 
 bool Client::setAccessKey(const int num = 0) {
@@ -18,7 +21,11 @@ bool Client::setAccessKey(const int num = 0) {
 		std::cout << "You can get your access key here: https://coinlayer.com/\nEnter your access key: ";
 		std::cin >> temp_access_key;
 		 
-		if (temp_access_key.size() < 32) return false;
+		if (temp_access_key.size() < 32) {
+			std::cout << "Error! The access key is too small.";
+			system("pause");
+			return false;
+		}
 		this->access_key = temp_access_key;
 	}
 	else {

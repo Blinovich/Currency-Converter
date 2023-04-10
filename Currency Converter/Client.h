@@ -3,8 +3,8 @@
 #include <boost/beast.hpp>
 #include <boost/asio/connect.hpp>
 #include <boost/asio/ip/tcp.hpp>
-#include <string>
 #include <iostream>
+#include <cstdio>
 
 const static std::string MAIN_API = "api.coinlayer.com";
 
@@ -24,7 +24,7 @@ public:
 		boost::asio::connect(socket, resolver.resolve(MAIN_API, "80"));
 
 		http::request<http::string_body> req(http::verb::get, API_ARGUMENTS + getAccessKey(), 11);
-		if (symbols != "") {
+		if (symbols != "" && symbols != "no") {
 			req.target(API_ARGUMENTS + getAccessKey() + "&symbols=" + symbols);
 		}
 		
