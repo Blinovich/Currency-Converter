@@ -1,9 +1,7 @@
 Menu: 
 1. Enter your access key (the offered key may be full (100 activations))*
-2. Withdrawal of all quotes
-3. Output of the selected cryptocurrency quote
-4. Output quotes for a specific day
-5. Transfer of all available cryptocurrencies and standard (fiat) currencies.
+2. Withdrawal of cryptocurrency quotes live, historical and list
 * - you can get access key here https://coinlayer.com/
 
 Your choice:  
+
