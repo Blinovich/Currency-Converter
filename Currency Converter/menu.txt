@@ -3,8 +3,7 @@ Menu:
 2. Withdrawal of all quotes
 3. Output of the selected cryptocurrency quote
 4. Output quotes for a specific day
-5. Output of the quote for a certain period of time
-6. Withdrawal of cryptocurrency fluctuations over a certain period of time
+5. Transfer of all available cryptocurrencies and standard (fiat) currencies.
 * - you can get access key here https://coinlayer.com/
 
 Your choice:  
